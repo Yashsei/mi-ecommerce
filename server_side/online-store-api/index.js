@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
+const port = 3000;
 
 // Permitir peticiones desde otras direcciones y leer JSON
 app.use(cors({ origin: "*" }));
@@ -25,3 +26,8 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+
+//Routes
+app.use("/image/products", express.static("public/products"));
+app.use("/image/category", express.static("public/category"));
+app.use("/image/poster", express.static("public/posters"));
