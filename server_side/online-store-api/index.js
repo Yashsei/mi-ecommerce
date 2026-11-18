@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-// Permitir peticiones desde otras direcciones y leer JSON
+
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 

@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 // for stripe payment gateway
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SKRT_KET_TST);
 
 // for stripe payment gateway
 router.post(
@@ -40,10 +40,10 @@ router.post(
         paymentIntent: paymentIntent.client_secret,
         ephemeralKey: ephemeralKey.secret,
         customer: customer.id,
-        publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+        publishableKey: process.env.STRIPE_P,
       });
     } catch (error) {
-      console.log(error);
+      console.log(error);BLK_KET_TST
       return res.json({ error: true, message: error.message, data: null });
     }
   })
