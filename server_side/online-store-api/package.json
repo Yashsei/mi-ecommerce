@@ -11,12 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "body-parser": "^2.4.0",
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
     "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.24.10",
-    "nodemon": "^3.1.14"
+    "multer": "^2.5.0",
+    "nodemon": "^3.1.14",
+    "onesignal-node": "^3.4.0",
+    "stripe": "^23.1.0"
   }
 }
