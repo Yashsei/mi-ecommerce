@@ -19,8 +19,11 @@ mongoose
   .catch((error) => console.error("Error de conexión:", error.message));
 
 // Ruta de prueba
-app.get("/", (req, res) => {
-  res.json({ success: true, message: "API working successfully", data: null });
+app.post("/", (req, res) => {
+  const dataFromClient = req.body
+  const username = req.body.username
+  console.log(username);
+  res.json("API working successfully");
 });
 
 app.listen(process.env.PORT, () => {
