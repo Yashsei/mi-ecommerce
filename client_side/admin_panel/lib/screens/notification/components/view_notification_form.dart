@@ -27,7 +27,7 @@ class ViewNotificationForm extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3),
